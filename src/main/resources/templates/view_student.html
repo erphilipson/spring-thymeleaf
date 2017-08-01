@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>New Student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Student Created</h1>
+First Name: <span th:text="${student.firstName}"></span>
+<br/>
+Last Name: <span th:text="${student.lastName}"></span>
+<br/>
+Grade: <span th:text="${student.grade}"></span>
+<br/>
+<div th:switch="${student.enrolled}">
+    Enrolled?
+    <span th:case="true">Yes</span>
+    <span th:case="false">No</span>
+</div>
+</body>
+</html>
